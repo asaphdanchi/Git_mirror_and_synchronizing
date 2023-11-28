@@ -11,4 +11,4 @@ pipelines:
           - git push --mirror git@github.com:asaphdanchi/demo-g.git
           - |
             curl -X PUT \
-              -H "Authorization: token {{ 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 }}
+              -H "Authorization: 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
