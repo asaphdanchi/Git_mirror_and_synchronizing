@@ -9,11 +9,8 @@ pipelines:
           - git clone https://x-token-auth:ATCTT3xFfGN0vM0DPOMT1a96MKkxRglKkzM8QCIfZgENQeKoaeTVS4vWXwZA-0jZSrHjKo7-YABtzn6GpIKcGMTS1Ix2uZ5cDjhKgqiHOE-FAsRQheMLKEp_vR3w4mU0qAijyuNafXYKJbPUiKpiiWv23RIYRDOymiTOOOS0ZWMRsQuUlhzB8C8=D40524DE@bitbucket.org/demo-migration12/demo-testing.git
           - cd demo-testing
           - git push --mirror git@github.com:asaphdanchi/demo-g.git
-          - |
-            curl -X PUT \
               -H "Authorization: token $github_repo_var
               -H "Accept: application/vnd.github.v3+json
-              -d '{
+              -d {
               "permission": "read"
-            }' \
-            "https://api.github.com/repos/asaphdanchi/demo-g.collaborators/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" 
+            }
