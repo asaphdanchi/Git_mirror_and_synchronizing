@@ -6,6 +6,6 @@ pipelines:
         clone:
           enabled: false
         script:
-          - git clone https://x-token-auth:ATCTT3xFfGN0vM0DPOMT1a96MKkxRglKkzM8QCIfZgENQeKoaeTVS4vWXwZA-0jZSrHjKo7-YABtzn6GpIKcGMTS1Ix2uZ5cDjhKgqiHOE-FAsRQheMLKEp_vR3w4mU0qAijyuNafXYKJbPUiKpiiWv23RIYRDOymiTOOOS0ZWMRsQuUlhzB8C8=D40524DE@bitbucket.org/demo-migration12/demo-testing.git
+          - git clone https://x-token-auth:"$bitbucket_access"@bitbucket.org/demo-migration12/demo-testing.git
           - cd demo-testing
           - git push --mirror https://x-token-auth:"$github_repo"@github.com/asaphdanchi/demo-g.git
