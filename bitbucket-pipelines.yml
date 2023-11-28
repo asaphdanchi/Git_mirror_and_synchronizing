@@ -11,8 +11,9 @@ pipelines:
           - git push --mirror git@github.com:asaphdanchi/demo-g.git
           - |
             curl -X PUT \
-              -H "Authorization: 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
-              -H "Accept: application/vnd.github.v3+json
-              -d {
+              -H "Authorization: token ${{ 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 }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -d '{
               "permission": "read"
-            }
+            }' \
+            "https://api.github.com/repos/asaphdanchi/demo-g.collaborators/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" 
