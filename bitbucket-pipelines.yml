@@ -6,6 +6,6 @@ pipelines:
         clone:
           enabled: false
         script:
-          - git clone https://x-token-auth:"$bitbucket_access"@bitbucket.org/demo-migration12/demo-testing.git
-          - cd demo-testing
+          - git clone --mirror https://x-token-auth:"$bitbucket_access"@bitbucket.org/demo-migration12/demo-testing.git
+          - cd demo-testing.git
           - git push --mirror https://x-token-auth:"$github_repo"@github.com/asaphdanchi/demo-g.git
